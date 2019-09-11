@@ -1,5 +1,5 @@
-class Line < ActiveRecord::Base
-    has_many :stations
+class StationLine < ActiveRecord::Base
+    belongs_to :line
     belongs_to :station
 end 
    
