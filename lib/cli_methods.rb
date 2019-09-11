@@ -2,23 +2,20 @@ require 'rest-client'
 require 'json'
 require 'pry'
 
-#station = ""
-
 def greet
-    puts "Welcome to MartaFinder, the command line solution to for your MARTA train-finding needs!"
+    puts "Welcome to MartaFinder, the command line solution for your MARTA train-finding needs!"
 end
 
-def prompt
-    puts "Please enter a station name: "
+def get_origin
+  puts "Please enter your origin station."
+  gets.chomp.upcase
 end
 
-def get_station
-    station = gets.chomp
-    binding.pry
+def get_destination
+  var = gets.chomp.split.map { |e| e.capitalize }.join(" ")
+  if var == ""
+    puts "Enter something, cuck!"
+    get_destination
+  end
+  var
 end
-
-
-greet
-prompt
-get_station
-
