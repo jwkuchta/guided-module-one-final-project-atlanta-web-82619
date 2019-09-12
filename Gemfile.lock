@@ -36,6 +36,7 @@ GEM
     rack (1.6.5)
     rack-protection (1.5.3)
       rack
+    rake (12.3.3)
     require_all (1.3.3)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
@@ -66,6 +67,7 @@ DEPENDENCIES
   colorize
   json
   pry
+  rake
   require_all
   rest-client
   sinatra-activerecord
