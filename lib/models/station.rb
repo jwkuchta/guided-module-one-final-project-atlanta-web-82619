@@ -1,5 +1,7 @@
 class Station < ActiveRecord::Base
-    has many :lines, through: :station_line
+    has_many :lines, through: :station_lines
+    has_many :station_lines
+    has_many :users, through: :reviews
+    has_many :reviews
 end 
    
-#A line has many stations and a station has many lines, station_lines belongs to line and station

@@ -1,5 +1,6 @@
 class Line < ActiveRecord::Base
-    has many :stations, through: :station_lines
+    has_many :stations, through: :station_lines
+    has_many :station_lines
 end 
    
 
