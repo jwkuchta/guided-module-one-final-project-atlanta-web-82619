@@ -13,12 +13,12 @@ class CommandLineInterface
         pastel = Pastel.new
         puts pastel.yellow(font.write("Welcome to MartaFinder"))
         puts "A less ugly Marta app".blue
-        puts "*****************************************************************************".light_cyan
+        puts "*******************************************************************************".light_cyan
     end
 
     def login
         prompt = TTY::Prompt.new
-        login = prompt.select("Are you a registered user?".cyan, ["Yes, log me in", "No, create an account"])
+        login = prompt.select("Are you a registered user?".blue, ["Yes, log me in", "No, create an account"])
         if login == "Yes, log me in"
           user_name = prompt.ask("Enter your username:")
         else
